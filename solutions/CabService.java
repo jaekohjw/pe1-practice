@@ -1,0 +1,2 @@
+interface CabService extends Service {
+}

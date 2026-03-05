@@ -1,18 +1,18 @@
-class Cab extends Car {
+class PrivateCar extends Car {
   private String plate;
   private int availTime;
 
-  public Cab(String plate, int availTime) {
+  public PrivateCar(String plate, int availTime) {
     this.plate = plate;
     this.availTime = availTime;
   }
-  
+
   public int getWaitTime() {
     return this.availTime;
   }
 
   public boolean canProvide(Service service) {
-    if (service instanceof CabService) {
+    if (service instanceof PrivateCarService) {
       return true;
     } else {
       return false;
@@ -22,9 +22,9 @@ class Cab extends Car {
   @Override
   public String toString() {
     String filler = "";
-    if (availTime > 1) {
+    if (this.availTime > 1) {
       filler = "s";
     }
-    return String.format("Cab %s (%d min%s away)", plate, availTime, filler);
+    return String.format("PrivateCar %s (%d min%s away)", plate, availTime, filler);
   }
 }
