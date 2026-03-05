@@ -1,0 +1,2 @@
+interface PrivateCarService extends Service {
+}
